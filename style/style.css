@@ -28,17 +28,37 @@ body{
 }
 .image-container{
     width: 100%;
-
+    background: url('../images/image-equilibrium.jpg');
+    background-size: cover;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 260px;
+    cursor: pointer;
+    
 }
 .image-container img{
-    width: 100%;
-    height: 100%;
+    width: 15%;
     object-fit: cover;
-    border-radius: 10px;
+    opacity: 0;
+    transition: .3s ease-out;
 }
-.card h2{
+.image-container:hover {
+   
+    background: linear-gradient(hsla(178, 100%, 50%, 0.459),hsla(178, 100%, 50%, 0.459)),url('../images/image-equilibrium.jpg');
+    background-size: cover;
+}
+.image-container:hover> *{
+    opacity: 1;
+}
+.card h1{
     color: hsl(0, 0%, 100%);
     font-size: 20px;
+    cursor: pointer;
+}
+.card h1:hover,.creator-name:hover{
+    color: hsl(178, 100%, 50%);
 }
 .card p{
     color: hsl(215, 51%, 70%);
@@ -85,4 +105,5 @@ body{
 }
 .creator-name{
     color: white;
+    cursor: pointer;
 }
